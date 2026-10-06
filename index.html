@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ziqing Shi, MD, PhD</title>
+<meta name="description" content="Ziqing Shi builds multimodal human-sensing and 3D perception systems for medicine and robotics at Yale School of Medicine.">
+<meta property="og:title" content="Ziqing Shi, MD, PhD">
+<meta property="og:description" content="Human sensing, 3D vision, and medical video at Yale School of Medicine.">
+<meta property="og:image" content="https://seesaw-earth.github.io/images/ziqing.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#1e2b48;      /* forest silhouette navy */
+  --dusk:#6773ba;       /* periwinkle granite */
+  --lavender:#b3a6d9;   /* shadowed rock */
+  --glacier:#a8d8cf;    /* mint sky */
+  --alpenglow:#f5b04a;  /* sunlit face */
+  --sun:#f2d23c;
+
+  --bg:#f2f6f7;
+  --surface:#ffffff;
+  --ink:#1e2b48;
+  --muted:#4c5878;
+  --line:#d6dbe9;
+  --tag-bg:#e7e9f6;
+  --tag-ink:#3f4a8f;
+  --link:#4b56a3;
+
+  --display:"Josefin Sans", "Avenir Next", "Century Gothic", system-ui, sans-serif;
+  --body:"Literata", Georgia, "Times New Roman", serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#161f36; --surface:#1e2b48; --ink:#e9ecf7; --muted:#b4bbd6;
+    --line:#33406a; --tag-bg:#2c3863; --tag-ink:#cfd3f3; --link:#b3a6d9;
+  }
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.7 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--link);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--alpenglow);outline-offset:3px;border-radius:4px}
+
+/* ---------- Hero: the one bold moment ---------- */
+.hero{position:relative;color:#fff;background:linear-gradient(180deg,var(--glacier) 0%,#cfe9e3 45%,#e2dcf2 100%);overflow:hidden}
+.hero-inner{position:relative;z-index:2;max-width:1040px;margin:0 auto;padding:clamp(3rem,8vw,6rem) 1.5rem 0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(1.5rem,5vw,4rem);align-items:end}
+.hero h1{font:700 clamp(2.8rem,8vw,5.6rem)/0.95 var(--display);letter-spacing:-0.01em;margin:0 0 .4em;color:var(--night)}
+.hero .creds{font:600 1.05rem/1.4 var(--display);color:var(--night);opacity:.85;margin:0 0 1.2rem}
+.hero .lede{font:400 clamp(1.1rem,2vw,1.3rem)/1.55 var(--body);max-width:32ch;margin:0 0 2rem;color:var(--night)}
+.portrait{width:clamp(200px,28vw,300px);aspect-ratio:4/5;border-radius:999px 999px 18px 18px;overflow:hidden;border:6px solid var(--alpenglow);box-shadow:0 0 0 6px var(--night);background:var(--night)}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.ridge{position:relative;z-index:1;display:block;width:100%;height:clamp(110px,18vw,260px);margin-top:-2px}
+.hero-links{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.5rem}
+.hero-links a{font:600 .95rem/1 var(--display);color:var(--night);background:rgba(255,255,255,.7);padding:.7rem 1rem;border-radius:8px;text-decoration:none}
+.hero-links a:hover{background:#fff}
+.hero-links a.primary{background:var(--night);color:#fff}
+.hero-links a.primary:hover{background:#2a3a62}
+
+/* ---------- Content ---------- */
+main{max-width:1040px;margin:0 auto;padding:clamp(2.5rem,6vw,4.5rem) 1.5rem 4rem}
+section{display:grid;grid-template-columns:200px minmax(0,1fr);gap:1rem 3rem;padding:2.5rem 0;border-top:1px solid var(--line)}
+section:first-child{border-top:0;padding-top:0}
+h2{font:700 1.5rem/1.2 var(--display);margin:0;color:var(--ink)}
+.col p{margin:0 0 1em;max-width:62ch}
+.focus{list-style:none;padding:0;margin:0;display:grid;gap:.9rem}
+.focus li{padding-left:1.1rem;border-left:3px solid var(--dusk)}
+.focus strong{font-family:var(--display);font-weight:600}
+
+.project{padding:0 0 1.8rem;margin:0 0 1.8rem;border-bottom:1px dashed var(--line)}
+.project:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.project h3{font:600 1.25rem/1.3 var(--display);margin:0 0 .35rem}
+.project p{margin:0 0 .7rem;max-width:62ch;color:var(--muted)}
+.project.lead h3{font-size:1.5rem}
+.project.lead{padding:1.5rem;background:var(--surface);border-radius:12px;border-left:6px solid var(--alpenglow);border-bottom:0}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:0;list-style:none}
+.tags li{font:600 .8rem/1 var(--display);background:var(--tag-bg);color:var(--tag-ink);padding:.45rem .6rem .35rem;border-radius:6px}
+
+.pubs{list-style:none;padding:0;margin:0 0 1.5rem;display:grid;gap:1.1rem}
+.pubs li{max-width:68ch}
+.pubs .venue{font-family:var(--display);font-weight:700}
+.sub{font:600 1rem/1.3 var(--display);margin:0 0 .6rem;color:var(--muted)}
+.plain{margin:0;padding-left:1.2rem}
+.plain li{margin-bottom:.35rem}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.skills h3{font:600 1rem/1.3 var(--display);margin:0 0 .5rem}
+
+.contact a{font-family:var(--display);font-weight:600}
+footer{text-align:center;padding:2rem 1.5rem 3rem;color:var(--muted);font-size:.9rem}
+
+@media (max-width:760px){
+  .hero-inner{grid-template-columns:1fr;align-items:start}
+  .portrait{order:-1;width:180px}
+  section{grid-template-columns:1fr;gap:1.2rem}
+  .project.lead{padding:1.1rem}
+}
+@media (prefers-reduced-motion:no-preference){
+  .sun{animation:rise 1.6s ease-out both}
+  @keyframes rise{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>Ziqing Shi</h1>
+      <p class="creds">MD, PhD &nbsp;/&nbsp; Associate Research Scientist, Yale School of Medicine</p>
+      <p class="lede">I build multimodal human-sensing and 3D perception systems, from cameras and sensors to GPU pipelines, for medicine and robotics.</p>
+      <nav class="hero-links" aria-label="Profiles">
+        <a class="primary" href="mailto:ziqing.shi@yale.edu">Email me</a>
+        <a href="https://github.com/seesaw-earth">GitHub</a>
+        <a href="https://www.linkedin.com/in/ziqing-shi-b553a72ab">LinkedIn</a>
+        <a href="https://orcid.org/0000-0001-9151-8013">ORCID</a>
+      </nav>
+    </div>
+    <div class="portrait"><img src="images/ziqing.jpg" alt="Ziqing Shi in a navy bucket hat holding a soft-serve cone" width="800" height="1000"></div>
+  </div>
+
+  <!-- Original layered ridgeline -->
+  <svg class="ridge" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+    <circle class="sun" cx="1150" cy="120" r="46" fill="#f2d23c" opacity=".9"/>
+    <path d="M0 150 L120 110 L230 135 L360 70 L470 120 L600 95 L720 140 L860 60 L980 115 L1100 90 L1240 130 L1360 100 L1440 120 V260 H0Z" fill="#b3a6d9"/>
+    <path d="M860 60 L980 115 L930 150 L890 120 Z" fill="#f5b04a"/>
+    <path d="M360 70 L470 120 L420 140 L390 110 Z" fill="#f5b04a" opacity=".8"/>
+    <path d="M0 190 L150 150 L300 175 L450 140 L620 180 L780 150 L940 185 L1100 155 L1280 180 L1440 160 V260 H0Z" fill="#6773ba"/>
+    <g fill="#1e2b48">
+      <path d="M0 215 L40 205 L80 220 L140 200 L210 222 L300 208 L380 224 L470 206 L560 222 L650 204 L740 220 L840 208 L930 224 L1020 205 L1110 222 L1200 207 L1300 221 L1380 206 L1440 214 V260 H0Z"/>
+      <path d="M60 230 l18-62 18 62z M130 232 l14-48 14 48z M250 234 l20-70 20 70z M330 232 l13-44 13 44z M520 232 l17-58 17 58z M600 234 l12-40 12 40z M770 233 l19-66 19 66z M850 232 l13-46 13 46z M1010 233 l18-60 18 60z M1080 232 l12-42 12 42z M1240 233 l20-68 20 68z M1320 232 l14-50 14 50z"/>
+      <rect x="0" y="230" width="1440" height="30"/>
+    </g>
+  </svg>
+</header>
+
+<main>
+  <section id="about">
+    <h2>About</h2>
+    <div class="col">
+      <p>I trained as a physician and neuroscientist, and now work as a research engineer at Yale School of Medicine. My work turns raw video and sensor streams into measurements that clinicians and engineers can trust.</p>
+      <ul class="focus">
+        <li><strong>Markerless 3D human motion.</strong> Pose, mesh, and joint kinematics from everyday mobile and clinical video.</li>
+        <li><strong>Multimodal sensing.</strong> Video, IMU, motion capture, gaze, EEG/BCI, and task events on one synchronized timeline.</li>
+        <li><strong>Surgical video in 3D.</strong> Camera pose, depth, and point maps from procedural video, toward robotic perception.</li>
+        <li><strong>Deployable GPU systems.</strong> Taking research models from a laptop to reproducible AWS and CUDA pipelines.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="col">
+      <article class="project lead">
+        <h3>Markerless 3D human motion analysis</h3>
+        <p>Pipelines that turn mobile and clinical video into 3D human meshes, joint trajectories, and posture and asymmetry metrics. Applied to early neuromotor assessment in newborns and motor stereotypies in autism, and validated with two-camera agreement and joint-level correlations.</p>
+        <ul class="tags"><li>HSMR</li><li>PyTorch</li><li>OpenCV</li><li>Detectron2</li></ul>
+      </article>
+      <article class="project">
+        <h3>Cloud GPU pipeline for long video</h3>
+        <p>A private S3 to GPU to S3 workflow with reproducible environments, structured outputs, logging, and automated quality checks. Handles continuous recordings up to 24 hours and more than 2.5 million frames.</p>
+        <ul class="tags"><li>AWS EC2/S3</li><li>CUDA</li><li>Linux</li><li>FFmpeg</li></ul>
+      </article>
+      <article class="project">
+        <h3>Multimodal human-state sensing</h3>
+        <p>Synchronized first- and third-person cameras with IMU, motion capture, gaze, and body and hand pose. Timestamp alignment, calibration, and cross-sensor agreement checks, with video-derived motion validated against OptiTrack.</p>
+        <ul class="tags"><li>Video</li><li>IMU</li><li>OptiTrack</li><li>Gaze</li><li>EEG/BCI</li></ul>
+      </article>
+      <article class="project">
+        <h3>Surgical video to 3D</h3>
+        <p>Recovering camera pose, intrinsics, depth, and dense point maps from procedural video, and mapping where methods break: tissue deformation, specular glare, occlusion, blur, and weak parallax.</p>
+        <ul class="tags"><li>3D reconstruction</li><li>Depth</li><li>Point maps</li></ul>
+      </article>
+      <article class="project">
+        <h3>Video understanding with vision-language models</h3>
+        <p>Turning procedural and simulation video into time-stamped actions and reviewable evidence for human-in-the-loop evaluation.</p>
+        <ul class="tags"><li>VLM</li><li>Simulation</li></ul>
+      </article>
+      <article class="project">
+        <h3>Interactive experiment systems</h3>
+        <p>Unity3D VR and CAVE applications with experiment state machines and synchronized logging, plus Arduino-based apparatus with sensors and real-time control.</p>
+        <ul class="tags"><li>Unity3D / C#</li><li>Arduino</li><li>VR</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Toolkit</h2>
+    <div class="col skills">
+      <div><h3>Code and ML</h3><p>Python, PyTorch, OpenCV, NumPy, pandas, SciPy, scikit-learn, MATLAB, C#</p></div>
+      <div><h3>Vision models</h3><p>Detectron2, DeepLabCut, HSMR, pose estimation, 3D reconstruction</p></div>
+      <div><h3>Infrastructure</h3><p>AWS EC2/S3, CUDA, Linux, Git, Bash, FFmpeg</p></div>
+      <div><h3>Hardware</h3><p>Unity3D, Arduino, OptiTrack, IMU, eye tracking, EEG/BCI</p></div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="col">
+      <ol class="pubs" reversed>
+        <li>Shi Z, Bamford IJ, McKinley JW, Devi SPS, Vahedipour A, Bamford NS. Propranolol relieves L-Dopa-induced dyskinesia in Parkinsonian mice. <span class="venue">Brain Sciences</span>, 2020. <a href="https://doi.org/10.3390/brainsci10120903">DOI</a></li>
+        <li>McKinley JW, Shi Z*, Kawikova I, et al. Dopamine deficiency reduces striatal cholinergic interneuron function in models of Parkinson's disease. <span class="venue">Neuron</span>, 2019. <a href="https://doi.org/10.1016/j.neuron.2019.06.013">DOI</a> <br><small>*Co-first author</small></li>
+      </ol>
+      <p class="sub">In submission, 2026</p>
+      <ul class="plain">
+        <li>3D human skeleton analysis of motor stereotypies in autism</li>
+        <li>3D human skeleton analysis for early neuromotor assessment in newborns</li>
+        <li>Dual-color dopamine and acetylcholine fiber photometry during motor learning</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="recognition">
+    <h2>Recognition</h2>
+    <div class="col">
+      <ul class="plain">
+        <li>American Epilepsy Society Seed Grant, 2026–2027</li>
+        <li>Swebilius Foundation Grant, Yale Comprehensive Epilepsy Center, 2026</li>
+        <li>Yale Regional NSF I-Corps, 2026</li>
+        <li>Outstanding Young Scientists and Super Postdoctoral Researcher of Shanghai, 2021–2022</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="col">
+      <p><strong>MD, PhD, Clinical Medicine</strong><br>Central South University, Xiangya Hospital, 2011–2020</p>
+      <p><strong>Visiting Student, Pediatric Neurology</strong><br>Yale School of Medicine, 2017–2019</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <div class="col">
+      <p>I'm always glad to talk about human sensing, medical video, and 3D perception. Reach me at <a href="mailto:ziqing.shi@yale.edu">ziqing.shi@yale.edu</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Ziqing Shi · New Haven, CT</footer>
+</body>
+</html>
