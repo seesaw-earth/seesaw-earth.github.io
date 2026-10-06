@@ -65,6 +65,23 @@ a:hover{text-decoration-thickness:2px}
 .hero-links a.primary{background:var(--night);color:#fff}
 .hero-links a.primary:hover{background:#2a3a62}
 
+/* ---------- Apps and games ---------- */
+.apps{display:grid;gap:1.5rem}
+.app{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);background:var(--surface);border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.app-media{background:var(--night);display:flex;align-items:center;justify-content:center;min-height:220px}
+.app-media img{width:100%;height:100%;object-fit:cover}
+.app-media svg{width:70%;max-width:260px;height:auto}
+.app-body{padding:1.5rem 1.6rem}
+.app-kind{font:600 .9rem/1.3 var(--display);color:var(--dusk);margin:0 0 .3rem}
+.app h3{font:700 1.5rem/1.2 var(--display);margin:0 0 .5rem}
+.app p{margin:0 0 1rem;color:var(--muted);max-width:52ch}
+.app .actions{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.btn{font:600 .95rem/1 var(--display);padding:.75rem 1.05rem .65rem;border-radius:8px;text-decoration:none;display:inline-block}
+.btn.go{background:var(--alpenglow);color:var(--night)}
+.btn.go:hover{background:var(--sun)}
+.btn.quiet{color:var(--link);padding-left:.4rem;padding-right:.4rem}
+.app .note{font-size:.85rem;margin:1rem 0 0;color:var(--muted)}
+
 /* ---------- Content ---------- */
 main{max-width:1040px;margin:0 auto;padding:clamp(2.5rem,6vw,4.5rem) 1.5rem 4rem}
 section{display:grid;grid-template-columns:200px minmax(0,1fr);gap:1rem 3rem;padding:2.5rem 0;border-top:1px solid var(--line)}
@@ -102,6 +119,8 @@ footer{text-align:center;padding:2rem 1.5rem 3rem;color:var(--muted);font-size:.
   .portrait{order:-1;width:180px}
   section{grid-template-columns:1fr;gap:1.2rem}
   .project.lead{padding:1.1rem}
+  .app{grid-template-columns:1fr}
+  .app-media{min-height:180px}
 }
 @media (prefers-reduced-motion:no-preference){
   .sun{animation:rise 1.6s ease-out both}
@@ -119,6 +138,7 @@ footer{text-align:center;padding:2rem 1.5rem 3rem;color:var(--muted);font-size:.
       <p class="lede">I build multimodal human-sensing and 3D perception systems, from cameras and sensors to GPU pipelines, for medicine and robotics.</p>
       <nav class="hero-links" aria-label="Profiles">
         <a class="primary" href="mailto:ziqing.shi@yale.edu">Email me</a>
+        <a href="#apps">Apps and games</a>
         <a href="https://github.com/seesaw-earth">GitHub</a>
         <a href="https://www.linkedin.com/in/ziqing-shi-b553a72ab">LinkedIn</a>
         <a href="https://orcid.org/0000-0001-9151-8013">ORCID</a>
@@ -153,6 +173,47 @@ footer{text-align:center;padding:2rem 1.5rem 3rem;color:var(--muted);font-size:.
         <li><strong>Surgical video in 3D.</strong> Camera pose, depth, and point maps from procedural video, toward robotic perception.</li>
         <li><strong>Deployable GPU systems.</strong> Taking research models from a laptop to reproducible AWS and CUDA pipelines.</li>
       </ul>
+    </div>
+  </section>
+
+  <section id="apps">
+    <h2>Apps and games</h2>
+    <div class="col apps">
+      <article class="app">
+        <a class="app-media" href="xr-neurovascular-lab/" tabindex="-1" aria-hidden="true">
+          <img src="images/xr-lab.jpg" alt="" width="1200" height="750" loading="lazy">
+        </a>
+        <div class="app-body">
+          <p class="app-kind">Browser simulation · 3–5 minutes</p>
+          <h3>XR Neurovascular Lab</h3>
+          <p>Steer a guidewire through a 3D brain vessel tree using live fluoroscopy and a mixed-reality overlay that slowly drifts out of registration. You decide what to trust, then get a debrief on how you navigated.</p>
+          <div class="actions">
+            <a class="btn go" href="xr-neurovascular-lab/">Play in your browser</a>
+          </div>
+          <p class="note">Synthetic research simulation, not clinical guidance. Best on a laptop or desktop.</p>
+        </div>
+      </article>
+
+      <article class="app">
+        <a class="app-media" href="RodentFlow/" tabindex="-1" aria-hidden="true">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <rect x="20" y="20" width="160" height="160" rx="6" fill="none" stroke="#b3a6d9" stroke-width="4"/>
+            <rect x="60" y="60" width="80" height="80" fill="none" stroke="#6773ba" stroke-width="2" stroke-dasharray="5 5"/>
+            <path d="M40 150 C55 120 45 95 70 85 S110 105 120 75 S155 45 160 70 S140 130 110 140 S70 160 60 125" fill="none" stroke="#a8d8cf" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="60" cy="125" r="7" fill="#f5b04a"/>
+          </svg>
+        </a>
+        <div class="app-body">
+          <p class="app-kind">iPhone app</p>
+          <h3>RodentFlow</h3>
+          <p>Track rodent behavior from prerecorded videos for Open Field, T-Maze, and Y-Maze experiments, entirely on your iPhone. No account, no cloud video upload, and results export as structured JSON.</p>
+          <div class="actions">
+            <a class="btn go" href="RodentFlow/">See the app</a>
+            <a class="btn quiet" href="RodentFlow/support.html">Support</a>
+            <a class="btn quiet" href="RodentFlow/privacy.html">Privacy</a>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
