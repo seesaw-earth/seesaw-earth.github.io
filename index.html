@@ -1,312 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ziqing Shi, MD, PhD</title>
-<meta name="description" content="Ziqing Shi builds multimodal human-sensing and 3D perception systems for medicine and robotics at Yale School of Medicine.">
-<meta property="og:title" content="Ziqing Shi, MD, PhD">
-<meta property="og:description" content="Human sensing, 3D vision, and medical video at Yale School of Medicine.">
-<meta property="og:image" content="https://seesaw-earth.github.io/images/ziqing.jpg">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --night:#1e2b48;      /* forest silhouette navy */
-  --dusk:#6773ba;       /* periwinkle granite */
-  --lavender:#b3a6d9;   /* shadowed rock */
-  --glacier:#a8d8cf;    /* mint sky */
-  --alpenglow:#f5b04a;  /* sunlit face */
-  --sun:#f2d23c;
+  <head>
+    
 
-  --bg:#f2f6f7;
-  --surface:#ffffff;
-  --ink:#1e2b48;
-  --muted:#4c5878;
-  --line:#d6dbe9;
-  --tag-bg:#e7e9f6;
-  --tag-ink:#3f4a8f;
-  --link:#4b56a3;
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYWX61ZM7Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  --display:"Josefin Sans", "Avenir Next", "Century Gothic", system-ui, sans-serif;
-  --body:"Literata", Georgia, "Times New Roman", serif;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#161f36; --surface:#1e2b48; --ink:#e9ecf7; --muted:#b4bbd6;
-    --line:#33406a; --tag-bg:#2c3863; --tag-ink:#cfd3f3; --link:#b3a6d9;
-  }
-}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.7 var(--body);-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-a{color:var(--link);text-underline-offset:3px;text-decoration-thickness:1px}
-a:hover{text-decoration-thickness:2px}
-:focus-visible{outline:3px solid var(--alpenglow);outline-offset:3px;border-radius:4px}
+  gtag('config', 'G-ZYWX61ZM7Z');
+</script>
 
-/* ---------- Hero: the one bold moment ---------- */
-.hero{position:relative;color:#fff;background:linear-gradient(180deg,var(--glacier) 0%,#cfe9e3 45%,#e2dcf2 100%);overflow:hidden}
-.hero-inner{position:relative;z-index:2;max-width:1040px;margin:0 auto;padding:clamp(3rem,8vw,6rem) 1.5rem 0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(1.5rem,5vw,4rem);align-items:end}
-.hero h1{font:700 clamp(2.8rem,8vw,5.6rem)/0.95 var(--display);letter-spacing:-0.01em;margin:0 0 .4em;color:var(--night)}
-.hero .creds{font:600 1.05rem/1.4 var(--display);color:var(--night);opacity:.85;margin:0 0 1.2rem}
-.hero .lede{font:400 clamp(1.1rem,2vw,1.3rem)/1.55 var(--body);max-width:32ch;margin:0 0 2rem;color:var(--night)}
-.portrait{width:clamp(200px,28vw,300px);aspect-ratio:4/5;border-radius:999px 999px 18px 18px;overflow:hidden;border:6px solid var(--alpenglow);box-shadow:0 0 0 6px var(--night);background:var(--night)}
-.portrait img{width:100%;height:100%;object-fit:cover}
-.ridge{position:relative;z-index:1;display:block;width:100%;height:clamp(110px,18vw,260px);margin-top:-2px}
-.hero-links{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.5rem}
-.hero-links a{font:600 .95rem/1 var(--display);color:var(--night);background:rgba(255,255,255,.7);padding:.7rem 1rem;border-radius:8px;text-decoration:none}
-.hero-links a:hover{background:#fff}
-.hero-links a.primary{background:var(--night);color:#fff}
-.hero-links a.primary:hover{background:#2a3a62}
 
-/* ---------- Apps and games ---------- */
-.apps{display:grid;gap:1.5rem}
-.app{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);background:var(--surface);border-radius:14px;overflow:hidden;border:1px solid var(--line)}
-.app-media{background:var(--night);display:flex;align-items:center;justify-content:center;min-height:220px}
-.app-media img{width:100%;height:100%;object-fit:cover}
-.app-media svg{width:70%;max-width:260px;height:auto}
-.app-body{padding:1.5rem 1.6rem}
-.app-kind{font:600 .9rem/1.3 var(--display);color:var(--dusk);margin:0 0 .3rem}
-.app h3{font:700 1.5rem/1.2 var(--display);margin:0 0 .5rem}
-.app p{margin:0 0 1rem;color:var(--muted);max-width:52ch}
-.app .actions{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
-.btn{font:600 .95rem/1 var(--display);padding:.75rem 1.05rem .65rem;border-radius:8px;text-decoration:none;display:inline-block}
-.btn.go{background:var(--alpenglow);color:var(--night)}
-.btn.go:hover{background:var(--sun)}
-.btn.quiet{color:var(--link);padding-left:.4rem;padding-right:.4rem}
-.app .note{font-size:.85rem;margin:1rem 0 0;color:var(--muted)}
-
-/* ---------- Content ---------- */
-main{max-width:1040px;margin:0 auto;padding:clamp(2.5rem,6vw,4.5rem) 1.5rem 4rem}
-section{display:grid;grid-template-columns:200px minmax(0,1fr);gap:1rem 3rem;padding:2.5rem 0;border-top:1px solid var(--line)}
-section:first-child{border-top:0;padding-top:0}
-h2{font:700 1.5rem/1.2 var(--display);margin:0;color:var(--ink)}
-.col p{margin:0 0 1em;max-width:62ch}
-.focus{list-style:none;padding:0;margin:0;display:grid;gap:.9rem}
-.focus li{padding-left:1.1rem;border-left:3px solid var(--dusk)}
-.focus strong{font-family:var(--display);font-weight:600}
-
-.project{padding:0 0 1.8rem;margin:0 0 1.8rem;border-bottom:1px dashed var(--line)}
-.project:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
-.project h3{font:600 1.25rem/1.3 var(--display);margin:0 0 .35rem}
-.project p{margin:0 0 .7rem;max-width:62ch;color:var(--muted)}
-.project.lead h3{font-size:1.5rem}
-.project.lead{padding:1.5rem;background:var(--surface);border-radius:12px;border-left:6px solid var(--alpenglow);border-bottom:0}
-.tags{display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:0;list-style:none}
-.tags li{font:600 .8rem/1 var(--display);background:var(--tag-bg);color:var(--tag-ink);padding:.45rem .6rem .35rem;border-radius:6px}
-
-.pubs{list-style:none;padding:0;margin:0 0 1.5rem;display:grid;gap:1.1rem}
-.pubs li{max-width:68ch}
-.pubs .venue{font-family:var(--display);font-weight:700}
-.sub{font:600 1rem/1.3 var(--display);margin:0 0 .6rem;color:var(--muted)}
-.plain{margin:0;padding-left:1.2rem}
-.plain li{margin-bottom:.35rem}
-
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
-.skills h3{font:600 1rem/1.3 var(--display);margin:0 0 .5rem}
-
-.contact a{font-family:var(--display);font-weight:600}
-footer{text-align:center;padding:2rem 1.5rem 3rem;color:var(--muted);font-size:.9rem}
-
-@media (max-width:760px){
-  .hero-inner{grid-template-columns:1fr;align-items:start}
-  .portrait{order:-1;width:180px}
-  section{grid-template-columns:1fr;gap:1.2rem}
-  .project.lead{padding:1.1rem}
-  .app{grid-template-columns:1fr}
-  .app-media{min-height:180px}
-}
-@media (prefers-reduced-motion:no-preference){
-  .sun{animation:rise 1.6s ease-out both}
-  @keyframes rise{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
-}
-</style>
-</head>
-<body>
-
-<header class="hero">
-  <div class="hero-inner">
-    <div>
-      <h1>Ziqing Shi</h1>
-      <p class="creds">MD, PhD &nbsp;/&nbsp; Associate Research Scientist, Yale School of Medicine</p>
-      <p class="lede">I build multimodal human-sensing and 3D perception systems, from cameras and sensors to GPU pipelines, for medicine and robotics.</p>
-      <nav class="hero-links" aria-label="Profiles">
-        <a class="primary" href="mailto:ziqing.shi@yale.edu">Email me</a>
-        <a href="#apps">Apps and games</a>
-        <a href="https://github.com/seesaw-earth">GitHub</a>
-        <a href="https://www.linkedin.com/in/ziqing-shi-b553a72ab">LinkedIn</a>
-        <a href="https://orcid.org/0000-0001-9151-8013">ORCID</a>
-      </nav>
-    </div>
-    <div class="portrait"><img src="images/ziqing.jpg" alt="Ziqing Shi in a navy bucket hat holding a soft-serve cone" width="800" height="1000"></div>
-  </div>
-
-  <!-- Original layered ridgeline -->
-  <svg class="ridge" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
-    <circle class="sun" cx="1150" cy="120" r="46" fill="#f2d23c" opacity=".9"/>
-    <path d="M0 150 L120 110 L230 135 L360 70 L470 120 L600 95 L720 140 L860 60 L980 115 L1100 90 L1240 130 L1360 100 L1440 120 V260 H0Z" fill="#b3a6d9"/>
-    <path d="M860 60 L980 115 L930 150 L890 120 Z" fill="#f5b04a"/>
-    <path d="M360 70 L470 120 L420 140 L390 110 Z" fill="#f5b04a" opacity=".8"/>
-    <path d="M0 190 L150 150 L300 175 L450 140 L620 180 L780 150 L940 185 L1100 155 L1280 180 L1440 160 V260 H0Z" fill="#6773ba"/>
-    <g fill="#1e2b48">
-      <path d="M0 215 L40 205 L80 220 L140 200 L210 222 L300 208 L380 224 L470 206 L560 222 L650 204 L740 220 L840 208 L930 224 L1020 205 L1110 222 L1200 207 L1300 221 L1380 206 L1440 214 V260 H0Z"/>
-      <path d="M60 230 l18-62 18 62z M130 232 l14-48 14 48z M250 234 l20-70 20 70z M330 232 l13-44 13 44z M520 232 l17-58 17 58z M600 234 l12-40 12 40z M770 233 l19-66 19 66z M850 232 l13-46 13 46z M1010 233 l18-60 18 60z M1080 232 l12-42 12 42z M1240 233 l20-68 20 68z M1320 232 l14-50 14 50z"/>
-      <rect x="0" y="230" width="1440" height="30"/>
-    </g>
-  </svg>
-</header>
-
-<main>
-  <section id="about">
-    <h2>About</h2>
-    <div class="col">
-      <p>I trained as a physician and neuroscientist, and now work as a research engineer at Yale School of Medicine. My work turns raw video and sensor streams into measurements that clinicians and engineers can trust.</p>
-      <ul class="focus">
-        <li><strong>Markerless 3D human motion.</strong> Pose, mesh, and joint kinematics from everyday mobile and clinical video.</li>
-        <li><strong>Multimodal sensing.</strong> Video, IMU, motion capture, gaze, EEG/BCI, and task events on one synchronized timeline.</li>
-        <li><strong>Surgical video in 3D.</strong> Camera pose, depth, and point maps from procedural video, toward robotic perception.</li>
-        <li><strong>Deployable GPU systems.</strong> Taking research models from a laptop to reproducible AWS and CUDA pipelines.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="apps">
-    <h2>Apps and games</h2>
-    <div class="col apps">
-      <article class="app">
-        <a class="app-media" href="xr-neurovascular-lab/" tabindex="-1" aria-hidden="true">
-          <img src="images/xr-lab.jpg" alt="" width="1200" height="750" loading="lazy">
-        </a>
-        <div class="app-body">
-          <p class="app-kind">Browser simulation · 3–5 minutes</p>
-          <h3>XR Neurovascular Lab</h3>
-          <p>Steer a guidewire through a 3D brain vessel tree using live fluoroscopy and a mixed-reality overlay that slowly drifts out of registration. You decide what to trust, then get a debrief on how you navigated.</p>
-          <div class="actions">
-            <a class="btn go" href="xr-neurovascular-lab/">Play in your browser</a>
-          </div>
-          <p class="note">Synthetic research simulation, not clinical guidance. Best on a laptop or desktop.</p>
+    <title>
+      Pinnacle Technology | Neurological Tools for Data
+      Acquisition and Analysis
+    </title>
+    <link rel="shortcut icon"
+          href="favicon.ico">
+    <meta http-equiv="content-type"
+          content="text/html; charset=us-ascii">
+    <link rel="stylesheet"
+          href="css/main.css"
+          type="text/css"
+          media="screen, projection">
+    <style type="text/css"
+           media="screen">
+    #vid {visibility:hidden}#vid {visibility:visible}
+    </style>
+    <style type="text/css"
+           media="screen">
+    #vid {visibility:hidden}
+    </style>
+    <style type="text/css"
+           media="screen">
+    #vid {visibility:hidden}
+    </style>
+    <style type="text/css"
+           media="screen">
+    #vid {visibility:hidden}
+    </style>
+    <style type="text/css"
+           media="screen">
+    #vid {visibility:hidden}
+    </style>
+    <script type="text/javascript">
+    <!--
+    if (screen.width <= 800) {
+    window.location = "./mobile";
+    }
+    //-->
+    </script>
+    <meta property="og:title" content="Pinnacle Technology - pinnaclet.com">
+    <meta property="og:description" content="Pinnacle Technology specializes in researching, designing, and manufacturing turn-key solutions for preclinical Central Nervous System data acquisition and analysis.">
+    <meta property="og:image" content="https://pinnaclet.com/images/cover2_lttrbx.jpg">
+    <meta property="og:url" content="https://pinnaclet.com/">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#328744">
+    
+    <meta name="Keywords"
+          content=
+          "Pinnacle,Technology, Biosensors, Lactate Sensor, Ethanol Sensor, Glucose Sensor, Glutamate Sensor, Choline Sensor, Carbon Fiber Sensor, EEG EMG, BIO, Sleep Deprivation, 3-Channel, 4-Channel, Research, Physiology, Study, Medical, Device, Biomedical, EEG, EMG, Monitoring, Sleep, Wireless, Physiologic, Sleep, GLP, Software,Transmitter, Receiver, Scientific, Meetings, User, Group, Information, Implantable, Surgical, Hardware, Laboratory, Global, Leader, Educational, Events">
+    <meta name="Description"
+          content=
+          "Pinnacle Technology, Specializing in researching, designing, and manufacturing turn-key solutions for preclinical Central Nervous System data acquisition.">
+    </head>
+  <body>
+    <div id="wrapper">
+      <div id="header2">
+        <div class="headImg"></div>
+        <div class="cart">
+          <a href="https://store.pinnaclet.com"><span style=
+          "float:left; margin-top: 15px;">Online
+          <strong>Store</strong></span>
+          <div style="width:37px; float:left;">
+            <img src="images/cart.jpg">
+          </div></a>
+        </div><a href="index.html">
+        <div class="logo2"></div></a>
+      </div>
+      <div id="navcontainer">
+        <ul id="navlist">
+          <li id="active">
+            <a href="index.html"
+                id="current">HOME</a>
+          </li>
+          <li>
+            <a href="products.html">PRODUCTS</a>
+          </li>
+          <li>
+            <a href="software.html">SOFTWARE</a>
+          </li>
+          <li>
+            <a href="info-center.html">INFO CENTER</a>
+          </li>
+          <li>
+            <a href="about-us.html">ABOUT US</a>
+          </li>
+           <!--<li>
+            <a href="https://store.pinnaclet.com">ONLINE STORE</a>
+          </li>-->
+          <li>
+            <a href="high_volume.html">LARGE-SCALE</a>
+          </li>
+        </ul>
+      </div>
+      <div class="contentArea">
+        <div style=
+        "background-color:#000; width: 750px; height: 260px; margin-left: 65px; border: 4px solid #F9F0DA; margin-top: 10px; margin-bottom: 10px;">
+        <video width="750"
+               height="260"
+               autoplay=""
+               loop=""
+               poster="video/index_animation.png">
+               <!-- MP4 must be first for iPad! -->
+           <source src="video/index_animation.mp4"
+                  type="video/mp4"> <source src=
+                  "video/index_animation.webm"
+                  type="video/webm"> <img alt=
+                  "Pinnacle Technology"
+               src="video/index_animation.png"
+               width="750"
+               height="260"
+               title="No video playback capabilities."></video>
         </div>
-      </article>
-
-      <article class="app">
-        <a class="app-media" href="RodentFlow/" tabindex="-1" aria-hidden="true">
-          <svg viewBox="0 0 200 200" aria-hidden="true">
-            <rect x="20" y="20" width="160" height="160" rx="6" fill="none" stroke="#b3a6d9" stroke-width="4"/>
-            <rect x="60" y="60" width="80" height="80" fill="none" stroke="#6773ba" stroke-width="2" stroke-dasharray="5 5"/>
-            <path d="M40 150 C55 120 45 95 70 85 S110 105 120 75 S155 45 160 70 S140 130 110 140 S70 160 60 125" fill="none" stroke="#a8d8cf" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="60" cy="125" r="7" fill="#f5b04a"/>
-          </svg>
-        </a>
-        <div class="app-body">
-          <p class="app-kind">iPhone app</p>
-          <h3>RodentFlow</h3>
-          <p>Track rodent behavior from prerecorded videos for Open Field, T-Maze, and Y-Maze experiments, entirely on your iPhone. No account, no cloud video upload, and results export as structured JSON.</p>
-          <div class="actions">
-            <a class="btn go" href="RodentFlow/">See the app</a>
-            <a class="btn quiet" href="RodentFlow/support.html">Support</a>
-            <a class="btn quiet" href="RodentFlow/privacy.html">Privacy</a>
+        <div class="footerTall">
+          <div style=
+          "width: 400px; float:left; margin: 20px; margin-left: 40px;">
+          <h1 style=
+          "color:#fff; border-bottom:#FFF dotted 1px; width: 350px; margin-top:-7px;">
+            WHAT WE OFFER
+            </h1>
+            <p style=
+            "font-size:12px; padding-top: 8px; text-align: justify; color:#fff">
+            Pinnacle Technology specializes in researching,
+            designing, and manufacturing turn-key solutions for
+            preclinical Central Nervous System data acquisition
+            and analysis. By forging collaborative relationships
+            with our clients, we are able to develop
+            sophisticated new tools that improve and simplify
+            your research.
+            </p>
           </div>
+          <div style="width: 400px; float:left; margin: 20px;">
+            <a href="PDF/catalog.pdf"
+                 target="_blank">
+            <h1 style=
+            "color:#fff; width: 350px; margin-top:-7px; text-decoration:underline">
+            2025 CATALOG
+            </h1></a>
+            <!-- <a href="PDF/catalog.pdf"
+            target="_blank">
+       <h1 style=
+       "color:#fff; width: 350px; margin-top:-21px; text-decoration:underline">
+       2025 INDUSTRY-CATALOG
+       </h1> </a>-->
+            <h1 style=
+            "color:#fff; width: 350px; margin-top:-7px;">
+              LATEST NEWS/EVENTS:
+            </h1>
+            
+
+
+            <p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://www.sfn.org/meetings" target="_blank"><strong>Visit us at SfN (Booth #2429) - November 15-19</strong></a></font>
+            </p>
+
+            <p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://www.aesnet.org/AES-annual-meeting" target="_blank"><strong>Visit us at AES (Booth #513) - December 5-9</strong></a></font>
+            </p>
+<p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://www.pinnaclet.com/Spring_2025_Update/8274hr_i.pdf" target="_blank"><strong>Check out our new 8274-HR Wireless System</strong></a></font>
+            </p>
+
+
+            <!--
+            <p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://can-acn.org/meeting-2025/" target="_blank"><strong>Visit us at Canadian Neuroscience (Booth #7) - May 21-24</strong></a></font>
+            </p>
+
+            <p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://www.neurotrauma-symposium.org/" target="_blank"><strong>Neurotrauma (Booth #5) - June 15-18</strong></a></font>
+            </p>
+
+            <p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://www.jnss.org/en/" target="_blank"><strong>Japan Neuroscience - July 24-27</strong></a></font>
+            </p>
+
+
+
+
+            
+
+             
+            <p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://www.physiology.org/professional-development/meetings-events/american-physiology-summit?SSO=Y" target="_blank"><strong>Visit us at APS (Booth #911) - April 24-27</strong></a></font>
+            </p>
+
+            <p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://www.pinnaclet.com/Fall_2024_Newsletter/Holiday_Sensor_ShippingSchedule_2024f.pdf" target="_blank"><strong>Holiday Sensor Shipping Schedule</strong></a></font>
+            </p> 
+            
+            
+            <p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://mailchi.mp/pinnaclet.com/fall-2024-newsletter-17408609" target="_blank"><strong>Check out our latest newsletter - Issue 35: October 2024</strong></a></font>
+            </p>
+            
+             <p>
+
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://mailchi.mp/pinnaclet.com/april-2024-newsletter-17372617" target="_blank"><strong>Check out our latest newsletter - Issue 34: April 2024</strong></a></font>
+            </p>
+
+
+            <p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://www.aesnet.org/AES-annual-meeting/general-information/future-meetings" target="_blank"><strong>Visit us at AES (Booth #1923) - December 6-10</strong></a></font>
+            </p>
+
+            <p>
+             <p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://www.asneurochem.org/2024-annual-meeting" target="_blank"><strong>Visit us at American Society for Neurochemistry  (Table #9) - April 14-18</strong></a></font>
+            </p> 
+            
+
+            <p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://fensforum.org/" target="_blank"><strong>Visit us at FENS  (Booth #617) - June 25-29</strong></a></font>
+            </p>
+
+           
+            
+            <p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://mailchi.mp/pinnaclet.com/november-2023-newsletter-17348318"target="_blank"><strong>Check out our latest newsletter - Issue 33: November 2023</strong></a></font>
+            </p>
+            
+            
+
+        
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://www.physiology.org/professional-development/meetings-events/american-physiology-summit-2023?SSO=Y"><strong>American Physiology Summit - April 20-23</strong></a></font>
+            </p> 
+
+<p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://aesnet.org/AES-annual-meeting" target="_blank"><strong>Visit us at AES (Booth #510) - December 1-5</strong></a></font>
+            </p>
+
+
+            <p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://www.sfn.org/meetings/neuroscience-2023" target="_blank"><strong>Visit us at SfN (Booth #2134) - November 11-15</strong></a></font>
+            </p> 
+
+            <p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://mailchi.mp/pinnaclet.com/november-2022-newsletter-15922204"><strong>Check out our latest newsletter - Issue 31: November 2022</strong></a></font>
+            </p>
+            
+            <p>
+              <font style="color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif;"><a style=
+              "color:#FFF; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration: underline;" href="https://mailchi.mp/pinnaclet.com/june-2022-newsletter-15692660"><strong>Check out our latest newsletter - Issue 30: June 2022</strong></a></font>
+            </p> -->
+
+	    
+          </div>
+          <p style=
+          "font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#FFF; margin: 0 auto; margin-top: - 10px; width: 800px; clear:both; line-height: 10px;"
+             align="center">
+            PINNACLE TECHNOLOGY DE, LLC : 2721 OREGON ST.,
+            LAWRENCE, KS 66046 :
+            <strong>PHONE:</strong> (785) 832.8866
+            : <strong>FAX:</strong> (785) 749.9214 :
+             <a style=
+             	"font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#FFF;"
+             	href= 
+            "mailto:sales@pinnaclet.com?subject=Email%20from%20Website">
+            <strong>SALES@PINNACLET.COM</strong></a>
+            	<br> <a style=
+             	"font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#FFF;"
+             	href= 
+            "PDF/Terms_of_Use.pdf">
+            Terms and Conditions</a>
+             <a style=
+             	"font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#FFF;"
+             	href= 
+            "PDF/Privacy_Policy.pdf">
+            Privacy Policy</a>
+          </p>
         </div>
-      </article>
+      </div>
     </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="col">
-      <article class="project lead">
-        <h3>Markerless 3D human motion analysis</h3>
-        <p>Pipelines that turn mobile and clinical video into 3D human meshes, joint trajectories, and posture and asymmetry metrics. Applied to early neuromotor assessment in newborns and motor stereotypies in autism, and validated with two-camera agreement and joint-level correlations.</p>
-        <ul class="tags"><li>HSMR</li><li>PyTorch</li><li>OpenCV</li><li>Detectron2</li></ul>
-      </article>
-      <article class="project">
-        <h3>Cloud GPU pipeline for long video</h3>
-        <p>A private S3 to GPU to S3 workflow with reproducible environments, structured outputs, logging, and automated quality checks. Handles continuous recordings up to 24 hours and more than 2.5 million frames.</p>
-        <ul class="tags"><li>AWS EC2/S3</li><li>CUDA</li><li>Linux</li><li>FFmpeg</li></ul>
-      </article>
-      <article class="project">
-        <h3>Multimodal human-state sensing</h3>
-        <p>Synchronized first- and third-person cameras with IMU, motion capture, gaze, and body and hand pose. Timestamp alignment, calibration, and cross-sensor agreement checks, with video-derived motion validated against OptiTrack.</p>
-        <ul class="tags"><li>Video</li><li>IMU</li><li>OptiTrack</li><li>Gaze</li><li>EEG/BCI</li></ul>
-      </article>
-      <article class="project">
-        <h3>Surgical video to 3D</h3>
-        <p>Recovering camera pose, intrinsics, depth, and dense point maps from procedural video, and mapping where methods break: tissue deformation, specular glare, occlusion, blur, and weak parallax.</p>
-        <ul class="tags"><li>3D reconstruction</li><li>Depth</li><li>Point maps</li></ul>
-      </article>
-      <article class="project">
-        <h3>Video understanding with vision-language models</h3>
-        <p>Turning procedural and simulation video into time-stamped actions and reviewable evidence for human-in-the-loop evaluation.</p>
-        <ul class="tags"><li>VLM</li><li>Simulation</li></ul>
-      </article>
-      <article class="project">
-        <h3>Interactive experiment systems</h3>
-        <p>Unity3D VR and CAVE applications with experiment state machines and synchronized logging, plus Arduino-based apparatus with sensors and real-time control.</p>
-        <ul class="tags"><li>Unity3D / C#</li><li>Arduino</li><li>VR</li></ul>
-      </article>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>Toolkit</h2>
-    <div class="col skills">
-      <div><h3>Code and ML</h3><p>Python, PyTorch, OpenCV, NumPy, pandas, SciPy, scikit-learn, MATLAB, C#</p></div>
-      <div><h3>Vision models</h3><p>Detectron2, DeepLabCut, HSMR, pose estimation, 3D reconstruction</p></div>
-      <div><h3>Infrastructure</h3><p>AWS EC2/S3, CUDA, Linux, Git, Bash, FFmpeg</p></div>
-      <div><h3>Hardware</h3><p>Unity3D, Arduino, OptiTrack, IMU, eye tracking, EEG/BCI</p></div>
-    </div>
-  </section>
-
-  <section id="publications">
-    <h2>Publications</h2>
-    <div class="col">
-      <ol class="pubs" reversed>
-        <li>Shi Z, Bamford IJ, McKinley JW, Devi SPS, Vahedipour A, Bamford NS. Propranolol relieves L-Dopa-induced dyskinesia in Parkinsonian mice. <span class="venue">Brain Sciences</span>, 2020. <a href="https://doi.org/10.3390/brainsci10120903">DOI</a></li>
-        <li>McKinley JW, Shi Z*, Kawikova I, et al. Dopamine deficiency reduces striatal cholinergic interneuron function in models of Parkinson's disease. <span class="venue">Neuron</span>, 2019. <a href="https://doi.org/10.1016/j.neuron.2019.06.013">DOI</a> <br><small>*Co-first author</small></li>
-      </ol>
-      <p class="sub">In submission, 2026</p>
-      <ul class="plain">
-        <li>3D human skeleton analysis of motor stereotypies in autism</li>
-        <li>3D human skeleton analysis for early neuromotor assessment in newborns</li>
-        <li>Dual-color dopamine and acetylcholine fiber photometry during motor learning</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="recognition">
-    <h2>Recognition</h2>
-    <div class="col">
-      <ul class="plain">
-        <li>American Epilepsy Society Seed Grant, 2026–2027</li>
-        <li>Swebilius Foundation Grant, Yale Comprehensive Epilepsy Center, 2026</li>
-        <li>Yale Regional NSF I-Corps, 2026</li>
-        <li>Outstanding Young Scientists and Super Postdoctoral Researcher of Shanghai, 2021–2022</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <div class="col">
-      <p><strong>MD, PhD, Clinical Medicine</strong><br>Central South University, Xiangya Hospital, 2011–2020</p>
-      <p><strong>Visiting Student, Pediatric Neurology</strong><br>Yale School of Medicine, 2017–2019</p>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <div class="col">
-      <p>I'm always glad to talk about human sensing, medical video, and 3D perception. Reach me at <a href="mailto:ziqing.shi@yale.edu">ziqing.shi@yale.edu</a>.</p>
-    </div>
-  </section>
-</main>
-
-<footer>© 2026 Ziqing Shi · New Haven, CT</footer>
-</body>
+  </body>
 </html>
