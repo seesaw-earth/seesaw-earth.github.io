@@ -82,25 +82,69 @@ a:hover{text-decoration-thickness:2px}
 .btn.quiet{color:var(--link);padding-left:.4rem;padding-right:.4rem}
 .app .note{font-size:.85rem;margin:1rem 0 0;color:var(--muted)}
 
-/* ---------- App cards with icons ---------- */
-.apps-intro{margin:0 0 1.4rem;color:var(--muted);max-width:62ch}
-.app-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.2rem;margin-bottom:1.8rem}
-.app-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.3rem 1.3rem 1.1rem;display:flex;flex-direction:column;gap:.85rem}
-.app-head{display:flex;gap:1rem;align-items:center}
-.app-icon{width:76px;height:76px;border-radius:22%;flex:none;box-shadow:0 2px 10px rgba(30,43,72,.18)}
-.app-card h3{font:700 1.35rem/1.15 var(--display);margin:0}
-.app-meta{font:600 .85rem/1.35 var(--display);color:var(--muted);margin:.2rem 0 0}
-.status{display:inline-block;font:600 .75rem/1 var(--display);padding:.38rem .6rem .3rem;border-radius:999px;margin-top:.45rem}
-.status.live{background:#d8f1e4;color:#17603f}
-.status.soon{background:#fdebd0;color:#7f4b00}
-.app-card p{margin:0;color:var(--muted)}
-.app-card .actions{display:flex;flex-wrap:wrap;gap:.35rem .3rem;align-items:center;margin-top:auto}
-.app-card .btn{padding:.6rem .85rem .5rem;font-size:.9rem}
-.app-card .btn.quiet{padding-left:.35rem;padding-right:.35rem}
-.sub-apps{font:600 1rem/1.3 var(--display);color:var(--muted);margin:0 0 .8rem}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]) .status.live{background:#1f4d3a;color:#c9f0dc}
-  :root:not([data-theme="light"]) .status.soon{background:#5a3d12;color:#fde3bd}
+/* ---------- App shelf: full-width band at the foot of the ridge ---------- */
+section.shelf{display:block;position:relative;z-index:3;margin:-2px 0 0;padding:clamp(1.5rem,4vw,2.5rem) 0 clamp(3rem,7vw,5rem);border:0;background:var(--night);color:#e9ecf7}
+.shelf-inner{max-width:1040px;margin:0 auto;padding:0 1.5rem}
+.shelf h2{font:700 clamp(2rem,4.5vw,3rem)/1.05 var(--display);color:#fff;margin:0 0 .6rem}
+.shelf-lede{font:400 1.1rem/1.6 var(--body);color:#c3c9e2;max-width:56ch;margin:0 0 2.5rem}
+.shelf h3.group{font:600 1.05rem/1.3 var(--display);color:var(--glacier);margin:0 0 1rem;display:flex;align-items:center;gap:.8rem}
+.shelf h3.group::after{content:"";flex:1;height:1px;background:rgba(179,166,217,.28)}
+.shelf .group-block{margin:0 0 2.6rem}
+.shelf .group-block:last-child{margin-bottom:0}
+.shelf a{color:var(--glacier)}
+.shelf a:hover{color:#fff}
+
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+.tile{position:relative;background:#26355a;border:1px solid rgba(179,166,217,.18);border-radius:20px;padding:1.5rem;display:flex;flex-direction:column}
+.tile:hover{border-color:rgba(168,216,207,.55)}
+.tile-icon{width:92px;height:92px;border-radius:22.5%;box-shadow:0 10px 24px rgba(0,0,0,.35);margin:0 0 1.2rem}
+.tile h4{font:700 1.45rem/1.15 var(--display);margin:0;color:#fff}
+.tile h4 a{color:inherit;text-decoration:none}
+.tile h4 a::after{content:"";position:absolute;inset:0;border-radius:20px}
+.tile h4 a:focus-visible{outline:none}
+.tile:has(h4 a:focus-visible){outline:3px solid var(--alpenglow);outline-offset:3px}
+.platform{font:600 .9rem/1.4 var(--display);color:var(--lavender);margin:.3rem 0 .9rem}
+.tile p.desc{font-size:1rem;line-height:1.6;color:#c3c9e2;margin:0 0 1.2rem}
+.tile-links{display:flex;flex-wrap:wrap;gap:.3rem .85rem;margin-top:auto;padding-top:.9rem;border-top:1px solid rgba(179,166,217,.18);position:relative;z-index:1}
+.tile-links a{font:600 .86rem/1.6 var(--display);text-decoration:none}
+.tile-links a:hover{text-decoration:underline}
+
+.feature{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,.8fr);gap:1.5rem 2rem;align-items:start;background:linear-gradient(135deg,#2b3b66 0%,#26355a 60%);border:1px solid rgba(245,176,74,.35);border-radius:24px;padding:clamp(1.4rem,3vw,2.2rem)}
+.feature .tile-icon{width:120px;height:120px;margin:0}
+.feature h4{font:700 clamp(1.6rem,3vw,2.1rem)/1.1 var(--display);margin:0;color:#fff}
+.feature p.desc{color:#c3c9e2;margin:0 0 1.3rem;max-width:52ch}
+.editions{list-style:none;margin:0;padding:0;display:grid;gap:.8rem}
+.editions li{padding:.85rem 1rem;border-radius:12px;background:rgba(30,43,72,.6);border:1px solid rgba(179,166,217,.18)}
+.editions strong{display:block;font:600 1rem/1.3 var(--display);color:#fff}
+.editions span{font-size:.92rem;line-height:1.5;color:#c3c9e2}
+.feature .actions{display:flex;flex-wrap:wrap;gap:.6rem 1.1rem;align-items:center}
+.feature .actions a:not(.btn){font:600 .95rem/1 var(--display);text-decoration:none}
+.feature .actions a:not(.btn):hover{text-decoration:underline}
+.shelf .btn.go{color:var(--night)}
+.shelf .btn.go:hover{color:var(--night)}
+
+.game{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);background:#26355a;border:1px solid rgba(179,166,217,.18);border-radius:20px;overflow:hidden}
+.game img{width:100%;height:100%;object-fit:cover;min-height:240px}
+.game-body{padding:1.6rem 1.7rem}
+.game-body h4{font:700 1.5rem/1.15 var(--display);margin:0 0 .3rem;color:#fff}
+.game-body p{color:#c3c9e2;margin:0 0 1.1rem}
+.game-body .note{font-size:.88rem;color:#9aa3c7;margin:1rem 0 0}
+
+@media (max-width:900px){
+  .tiles{grid-template-columns:1fr}
+  .tile{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:1.3rem;align-items:start}
+  .tile > *{grid-column:2}
+  .tile .tile-icon{grid-column:1;grid-row:1 / span 4;width:84px;height:84px;margin:0}
+  .feature{grid-template-columns:auto minmax(0,1fr)}
+  .feature .editions-wrap{grid-column:1 / -1}
+}
+@media (max-width:620px){
+  .tile{column-gap:1rem;padding:1.2rem}
+  .tile .tile-icon{width:64px;height:64px}
+  .feature{grid-template-columns:1fr}
+  .feature .tile-icon{width:96px;height:96px}
+  .game{grid-template-columns:1fr}
+  .game img{min-height:0;aspect-ratio:16/10}
 }
 
 /* ---------- Content ---------- */
@@ -183,106 +227,93 @@ footer{text-align:center;padding:2rem 1.5rem 3rem;color:var(--muted);font-size:.
   </svg>
 </header>
 
-<main>
-  <section id="apps">
-    <h2>Apps and games</h2>
-    <div class="col">
-      <p class="apps-intro">Open-source apps I design and build. They run on the device, with no account and no cloud upload.</p>
-      <div class="app-grid">
+<section class="shelf" id="apps" aria-labelledby="apps-title">
+  <div class="shelf-inner">
+    <h2 id="apps-title">Apps and games</h2>
+    <p class="shelf-lede">Tools for behavior labs, and one for the climbing gym. Each runs on your device, with no account and nothing uploaded. All of them are open source.</p>
 
-        <article class="app-card">
-          <div class="app-head">
-            <img class="app-icon" src="images/apps/rodentflow.png" alt="RodentFlow app icon" width="76" height="76" loading="lazy">
-            <div>
-              <h3>RodentFlow</h3>
-              <p class="app-meta">iPhone · iOS 17+ · MIT license</p>
-              <span class="status live">On the App Store</span>
-            </div>
-          </div>
-          <p>Rodent behavior from top-down video: ten tracked assays, manual scoring and table import for fifteen, and group statistics with the animal as the unit.</p>
-          <div class="actions">
-            <a class="btn go" href="RodentFlow/">User manual</a>
-            <a class="btn quiet" href="https://github.com/seesaw-earth/RodentFlow">Source</a>
-            <a class="btn quiet" href="RodentFlow/support.html">Support</a>
-            <a class="btn quiet" href="RodentFlow/privacy.html">Privacy</a>
+    <div class="group-block">
+      <h3 class="group">On the App Store</h3>
+      <div class="tiles">
+        <article class="tile">
+          <img class="tile-icon" src="images/apps/rodentflow.png" alt="" width="92" height="92">
+          <h4><a href="RodentFlow/">RodentFlow</a></h4>
+          <p class="platform">iPhone, iOS 17 or later</p>
+          <p class="desc">Track rodents in top-down video across ten assays, score or import fifteen more, and run group statistics with the animal as the unit.</p>
+          <div class="tile-links">
+            <a href="RodentFlow/">Manual</a>
+            <a href="https://github.com/seesaw-earth/RodentFlow">Source (MIT)</a>
+            <a href="RodentFlow/support.html">Support</a>
+            <a href="RodentFlow/privacy.html">Privacy</a>
           </div>
         </article>
-
-        <article class="app-card">
-          <div class="app-head">
-            <img class="app-icon" src="images/apps/rodentlimb.png" alt="RodentLimb app icon" width="76" height="76" loading="lazy">
-            <div>
-              <h3>RodentLimb</h3>
-              <p class="app-meta">iPhone &amp; iPad · iOS 17+ · AGPL-3.0</p>
-              <span class="status live">On the App Store</span>
-            </div>
-          </div>
-          <p>Paw, nose and tail-base pose for tail suspension, cylinder and gait tests. Change any parameter and the results update instantly.</p>
-          <div class="actions">
-            <a class="btn go" href="RodentLimb/">User manual</a>
-            <a class="btn quiet" href="https://github.com/seesaw-earth/RodentLimb">Source</a>
-            <a class="btn quiet" href="RodentLimb/support.html">Support</a>
-            <a class="btn quiet" href="RodentLimb/privacy.html">Privacy</a>
+        <article class="tile">
+          <img class="tile-icon" src="images/apps/rodentlimb.png" alt="" width="92" height="92">
+          <h4><a href="RodentLimb/">RodentLimb</a></h4>
+          <p class="platform">iPhone and iPad, iOS 17 or later</p>
+          <p class="desc">Follow paws, nose and tail base frame by frame to score tail suspension, cylinder and gait tests. Change a parameter and the results update instantly.</p>
+          <div class="tile-links">
+            <a href="RodentLimb/">Manual</a>
+            <a href="https://github.com/seesaw-earth/RodentLimb">Source (AGPL)</a>
+            <a href="RodentLimb/support.html">Support</a>
+            <a href="RodentLimb/privacy.html">Privacy</a>
           </div>
         </article>
-
-        <article class="app-card">
-          <div class="app-head">
-            <img class="app-icon" src="images/apps/climbcolor.png" alt="ClimbColor app icon" width="76" height="76" loading="lazy">
-            <div>
-              <h3>ClimbColor</h3>
-              <p class="app-meta">iPhone · AGPL-3.0</p>
-              <span class="status live">On the App Store</span>
-            </div>
-          </div>
-          <p>Photograph a climbing wall, tap one hold, and see the rest of the same-color route, found by on-device hold segmentation.</p>
-          <div class="actions">
-            <a class="btn go" href="https://github.com/seesaw-earth/ClimbColor">Source</a>
-            <a class="btn quiet" href="ClimbColor/support.html">Support</a>
-            <a class="btn quiet" href="ClimbColor/privacy.html">Privacy</a>
+        <article class="tile">
+          <img class="tile-icon" src="images/apps/climbcolor.png" alt="" width="92" height="92">
+          <h4><a href="https://github.com/seesaw-earth/ClimbColor">ClimbColor</a></h4>
+          <p class="platform">iPhone</p>
+          <p class="desc">Photograph a climbing wall and tap one hold. ClimbColor finds every hold of the same color, so the route stands out on a busy wall.</p>
+          <div class="tile-links">
+            <a href="https://github.com/seesaw-earth/ClimbColor">Source (AGPL)</a>
+            <a href="ClimbColor/support.html">Support</a>
+            <a href="ClimbColor/privacy.html">Privacy</a>
           </div>
         </article>
+      </div>
+    </div>
 
-        <article class="app-card">
-          <div class="app-head">
-            <img class="app-icon" src="images/apps/rodentstudio.png" alt="RodentStudio app icon" width="76" height="76" loading="lazy">
-            <div>
-              <h3>RodentStudio</h3>
-              <p class="app-meta">Mac, iPhone &amp; iPad · AGPL-3.0</p>
-              <span class="status soon">Open source · coming soon</span>
-            </div>
-          </div>
-          <p>Whole behavior studies in one place: pose, limb, gait and centroid tracking across about 30 assays, frame-by-frame review, group comparisons and CSV export. The iPhone and iPad edition replaces RodentPose.</p>
+    <div class="group-block">
+      <h3 class="group">Open source, coming soon</h3>
+      <article class="feature">
+        <img class="tile-icon" src="images/apps/rodentstudio.png" alt="" width="120" height="120">
+        <div>
+          <h4>RodentStudio</h4>
+          <p class="platform">Mac, iPhone and iPad</p>
+          <p class="desc">One place for a whole behavior study: pose, limb, gait and centroid tracking across about 30 assays, frame-by-frame review, group comparisons and CSV export.</p>
           <div class="actions">
             <a class="btn go" href="RodentStudio-Support/">See the app</a>
-            <a class="btn quiet" href="RodentStudio-Support/guide.html">User guide</a>
-            <a class="btn quiet" href="https://github.com/seesaw-earth/RodentStudio-Support/tree/main/source">Source</a>
-            <a class="btn quiet" href="RodentStudio-Support/support.html">Support</a>
+            <a href="RodentStudio-Support/guide.html">User guide</a>
+            <a href="https://github.com/seesaw-earth/RodentStudio-Support/tree/main/source">Source (AGPL)</a>
+            <a href="RodentStudio-Support/support.html">Support</a>
           </div>
-        </article>
+        </div>
+        <div class="editions-wrap">
+          <ul class="editions">
+            <li><strong>Mac</strong><span>Tasks, groups and animals for the whole study, statistics, and multi-chamber tail-suspension scoring.</span></li>
+            <li><strong>iPhone and iPad</strong><span>Six-keypoint pose analysis for 16 assays at the bench. Replaces RodentPose.</span></li>
+          </ul>
+        </div>
+      </article>
+    </div>
 
-      </div>
-
-      <p class="sub-apps">Game</p>
-      <div class="apps">
-      <article class="app">
-        <a class="app-media" href="xr-neurovascular-lab/" tabindex="-1" aria-hidden="true">
-          <img src="images/xr-lab.jpg" alt="" width="1200" height="750" loading="lazy">
-        </a>
-        <div class="app-body">
-          <p class="app-kind">Browser simulation · 3–5 minutes</p>
-          <h3>XR Neurovascular Lab</h3>
+    <div class="group-block">
+      <h3 class="group">Play in the browser</h3>
+      <article class="game">
+        <a href="xr-neurovascular-lab/" tabindex="-1" aria-hidden="true"><img src="images/xr-lab.jpg" alt="" width="1200" height="750" loading="lazy"></a>
+        <div class="game-body">
+          <h4>XR Neurovascular Lab</h4>
+          <p class="platform">Browser simulation, 3 to 5 minutes</p>
           <p>Steer a guidewire through a 3D brain vessel tree using live fluoroscopy and a mixed-reality overlay that slowly drifts out of registration. You decide what to trust, then get a debrief on how you navigated.</p>
-          <div class="actions">
-            <a class="btn go" href="xr-neurovascular-lab/">Play in your browser</a>
-          </div>
+          <a class="btn go" href="xr-neurovascular-lab/">Play in your browser</a>
           <p class="note">Synthetic research simulation, not clinical guidance. Best on a laptop or desktop.</p>
         </div>
       </article>
-      </div>
     </div>
-  </section>
+  </div>
+</section>
 
+<main>
   <section id="about">
     <h2>About</h2>
     <div class="col">
